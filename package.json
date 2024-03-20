@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:web": "npx playwright test --project=web --headed",
-    "test:mobile": "npx playwright test --project=mobile --headed",
-    "test:api": "npx playwright test --project=api"
+    "test:web": "npx playwright test .e2e/tests/web/ --project=web --headed",
+    "test:mobile": "npx playwright test .e2e/tests/mobile/ --project=mobile --headed",
+    "test:api": "npx playwright test .e2e/tests/api/ --project=api"
   },
   "keywords": [],
   "author": "",
