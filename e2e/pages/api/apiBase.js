@@ -1,12 +1,14 @@
+require('dotenv').config();
+
 class ApiBase {
   constructor(page) {
     this.page = page;
-    this.baseUrl = "https://reqres.in/api";
+    this.baseApiUrl = process.env.BASE_API_URL;
   }
 
   async getSingleUser(userId) {
     try {
-      const response = await this.page.goto(`${this.baseUrl}/users/${userId}`, {
+      const response = await this.page.goto(`${this.baseApiUrl}/users/${userId}`, {
         waitUntil: "networkidle",
       });
 

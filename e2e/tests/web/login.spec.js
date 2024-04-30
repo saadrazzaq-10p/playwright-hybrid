@@ -1,5 +1,8 @@
-const { test, expect } = require('../../../fixtures/base');
-const data = require("../../../data/test-data.json")
+const { test } = require('../../../fixtures/base');
+require('dotenv').config();
+
+const username = process.env.USERNAME;
+const password = process.env.PASS;
 
 test.describe("e2e Test", () => {
 
@@ -8,7 +11,6 @@ test.describe("e2e Test", () => {
     })
 
     test('Login functionality', async ({ page, loginPage }) => {
-
-        await loginPage.loginUser(data.username, data.password)
+        await loginPage.loginUser(username, password)
     })
 })

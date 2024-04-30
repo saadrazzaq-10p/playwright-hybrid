@@ -1,3 +1,6 @@
+require('dotenv').config();
+const username = process.env.User_Name;
+const password = process.env.User_Password;
 exports.loginPage = class LoginPage{
     constructor(page) {
     this.page = page
@@ -11,11 +14,11 @@ async navigateToLogin(){
 }
 
 async enterUserName(){
-    await this.username.fill('standard_user');
+    await this.username.fill(username);
 }
 
 async enterPassword(){
-    await this.password.fill('secret_sauce');
+    await this.password.fill(password);
 }
 async clickOnLogin(){
     await this.loginButton.click();

@@ -1,5 +1,6 @@
 const { test, expect } = require("@playwright/test");
 const ApiBase = require("../../pages/api/apiBase");
+const testData = require('../../../data/test-data.json');
 
 test.describe("Reqres API Tests", () => {
   let reqresPage;
@@ -17,15 +18,17 @@ test.describe("Reqres API Tests", () => {
   });
 
   test('Create User', async ({ page }) => {
+    const name = testData.name;
+    const job = testData.job;
+
     const newUser = {
-      name: 'John Doe',
-      job: 'Software Engineer',
+      name: name,
+      job: job
     };
-  
+
     const response = await reqresPage.createUser(newUser);
-  
+
     expect(response.name).toBe(newUser.name);
     expect(response.job).toBe(newUser.job);
   });
-  
 });

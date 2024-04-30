@@ -11,6 +11,5 @@ exports.test = Base.test.extend({
     }
 })
 
-exports.verify = Base.expect
 exports.expect = Base.expect
 exports.request = Base.request
