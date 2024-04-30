@@ -1,0 +1,5 @@
+config:
+  target: "https://reqres.in"
+  phases:
+    - duration: 10
+      arrivalRate: 1

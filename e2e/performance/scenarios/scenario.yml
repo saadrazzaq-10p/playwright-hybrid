@@ -1,0 +1,13 @@
+scenarios:
+  - name: "Get User"
+    flow:
+      - get:
+          url: "${config.target}/api/users/1"
+
+  - name: "Create User"
+    flow:
+      - post:
+          url: "${config.target}/api/users"
+          json:
+            name: "John"
+            job: "Tester"

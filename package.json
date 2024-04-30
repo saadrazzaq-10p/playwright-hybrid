@@ -6,7 +6,8 @@
   "scripts": {
     "test:web": "npx playwright test .e2e/tests/web/ --project=web --headed",
     "test:mobile": "npx playwright test .e2e/tests/mobile/ --project=mobile --headed",
-    "test:api": "npx playwright test .e2e/tests/api/ --project=api"
+    "test:api": "npx playwright test .e2e/tests/api/ --project=api",
+    "test:performance": "artillery run --config ./e2e/performance/config/config.yml ./e2e/performance/scenarios/scenario.yml"
   },
   "keywords": [],
   "author": "",
