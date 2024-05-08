@@ -30,7 +30,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter:[
     ['html'],
-    //['allure-playwright']
+    ['allure-playwright']
   ],
   use: {
     trace: 'on-first-retry',
