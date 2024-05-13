@@ -12,6 +12,25 @@ To install the Playwright Automation Framework, follow these steps:
 ### Configuration
 Customize the framework by adjusting the configuration files to match your testing environment and preferences.
 
+## Environment Configuration
+
+The `.env` file in the root directory contains configuration parameters for the framework. Before executing tests, ensure that the `.env` file is properly configured with the correct parameter values.
+
+### Updating Parameter Values
+
+1. Open the `.env` file located in the root directory of the project.
+2. Update the parameter values with the appropriate credentials and URLs.
+3. Save the changes to the `.env` file.
+
+Example `.env` file:
+
+```
+USERNAME=username
+PASS=password
+BASE_API_URL=https://reqres.in/api
+BASE_URL=https://www.saucedemo.com/
+PERFORMANCE_URL=https://reqres.in 
+```
 ## Framework Components
 The framework comprises the following key components:
 
