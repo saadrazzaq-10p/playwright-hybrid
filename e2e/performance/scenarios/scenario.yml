@@ -11,3 +11,11 @@ scenarios:
           json:
             name: "John"
             job: "Tester"
+
+  - name: "Update User"
+    flow:
+      - put:
+          url: "${config.target}/api/users/1"
+          json:
+            name: "Updated John"
+            job: "Senior Tester"
