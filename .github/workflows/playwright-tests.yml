@@ -32,6 +32,9 @@ jobs:
       - name: Install playwright
         run: npx playwright install
 
+      - name: Install parallel execution
+        run: npm install -g npm-run-all
+        
       - name: Run tests
         run: npm-run-all --parallel test:web test:mobile test:api
 
