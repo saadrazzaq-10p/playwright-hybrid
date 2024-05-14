@@ -11,13 +11,18 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Firefox'], channel: 'firefox' }, // Adjust as needed
     },
     {
+      name: 'chrome',
+      use: { ...devices['Desktop Chrome'], channel: 'chrome' }, // Adjust as needed
+    },
+    {
       name: 'mobile',
-      use: devices['iPhone 12 Pro Max'],
+      use: devices['iPhone 7 landscape'],
     },
     {
       name: 'api',
       use: { ...devices['Desktop Firefox'], channel: 'firefox' },
     },
+    
   ],
   testDir: './e2e/tests',
   /* Run tests in files in parallel */

@@ -2,12 +2,12 @@ scenarios:
   - name: "Get User"
     flow:
       - get:
-          url: "${config.target}/api/users/1"
+          url: "https://reqres.in/api/users/1"
 
   - name: "Create User"
     flow:
       - post:
-          url: "${config.target}/api/users"
+          url: "https://reqres.in/api/users"
           json:
             name: "John"
             job: "Tester"
@@ -15,7 +15,7 @@ scenarios:
   - name: "Update User"
     flow:
       - put:
-          url: "${config.target}/api/users/1"
+          url: "https://reqres.in/api/users/1"
           json:
             name: "Updated John"
             job: "Senior Tester"

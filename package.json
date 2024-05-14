@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:web": "npx playwright test .e2e/tests/web/ --project=web --headed",
+    "test:chrome": "npx playwright test .e2e/tests/web/ --project=chrome --headed",
     "test:mobile": "npx playwright test .e2e/tests/mobile/ --project=mobile --headed",
     "test:api": "npx playwright test .e2e/tests/api/ --project=api",
     "test:all": "npm-run-all --parallel test:web test:mobile test:api",

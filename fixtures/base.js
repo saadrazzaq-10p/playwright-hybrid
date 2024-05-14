@@ -10,6 +10,6 @@ exports.test = Base.test.extend({
         await use(new productsPage(page))
     }
 })
-
+//base class should be created for common functionality
 exports.expect = Base.expect
 exports.request = Base.request
