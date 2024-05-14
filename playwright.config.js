@@ -15,8 +15,8 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Chrome'], channel: 'chrome' }, // Adjust as needed
     },
     {
-      name: 'mobile',
-      use: devices['iPhone 7 landscape'],
+      name: 'responsive',
+      use: devices['iPhone 12 Pro Max'],
     },
     {
       name: 'api',
