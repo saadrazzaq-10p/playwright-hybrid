@@ -35,8 +35,8 @@ jobs:
       - name: Run Web tests
         run: npx playwright test .e2e/tests/web/ --project=web
 
-      # - name: Run Responsive tests
-      #   run: npx playwright test .e2e/tests/responsive/ --project=responsive
+      - name: Run Responsive tests
+        run: npx playwright test .e2e/tests/responsive/ --project=responsive
       
       # - name: Run API tests
       #   run: npx playwright test .e2e/tests/api/ --project=api
