@@ -18,8 +18,19 @@ jobs:
         with:
           node-version: '14'
 
+      - name: Set up environment variables
+        run: |
+          echo "BASE_API_URL=https://reqres.in/api" >> $GITHUB_ENV
+          echo "BASE_URL=https://www.saucedemo.com/" >> $GITHUB_ENV
+          echo "PERFORMANCE_URL=https://reqres.in" >> $GITHUB_ENV
+          echo "USERNAME=standard_user" >> $GITHUB_ENV
+          echo "PASS=secret_sauce" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: npm install
 
       - name: Run tests
-        run: test:all
+        run: npm-run-all --parallel test:web test:mobile test:api
+
+      - name: Generate Allure report
+        run: npx allure generate ./allure-results -clean
