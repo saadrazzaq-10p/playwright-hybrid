@@ -31,12 +31,15 @@ jobs:
 
       - name: Install playwright
         run: npx playwright install
-
-      - name: Install parallel execution
-        run: npm install -g npm-run-all
         
-      - name: Run tests
-        run: npm-run-all --parallel test:web test:mobile test:api
+      - name: Run Web tests
+        run: npx playwright test .e2e/tests/web/ --project=web
+
+      - name: Run Responsive tests
+        run: npx playwright test .e2e/tests/responsive/ --project=responsive
+      
+      - name: Run API tests
+        run: npx playwright test .e2e/tests/api/ --project=api
 
       - name: Generate Allure report
         run: npx allure generate ./allure-results -clean
