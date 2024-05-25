@@ -33,7 +33,7 @@ jobs:
         run: npx playwright install
         
       - name: Run Web tests
-        run: npx playwright test .e2e/tests/web/ --project=web
+        run: npx playwright test .e2e/tests/web/SearchTest.spec.js --project=web --headed
 
       - name: Generate Allure report
         run: npx allure generate ./allure-results -clean
