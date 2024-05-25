@@ -1,5 +1,5 @@
 const Base = require("@playwright/test");
-const { SearchPage } = require('../e2e/pages/responsive/searchPage');
+const { SearchPage } = require('../e2e/pages/responsive/SearchPage');
 const { WebSearchPage } = require('../e2e/pages/web/WebSearchPage');
 
 exports.test = Base.test.extend({
