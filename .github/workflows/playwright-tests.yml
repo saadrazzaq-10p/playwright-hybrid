@@ -20,8 +20,8 @@ jobs:
 
       - name: Set up environment variables
         run: |
-          echo "BASE_API_URL=https://reqres.in/api" >> $GITHUB_ENV
-          echo "BASE_URL=https://www.saucedemo.com/" >> $GITHUB_ENV
+          echo "BASE_API_URL=https://api.github.com/" >> $GITHUB_ENV
+          echo "BASE_URL=https://gh-users-search.netlify.app/" >> $GITHUB_ENV
           echo "PERFORMANCE_URL=https://reqres.in" >> $GITHUB_ENV
           echo "USERNAME=standard_user" >> $GITHUB_ENV
           echo "PASS=secret_sauce" >> $GITHUB_ENV
