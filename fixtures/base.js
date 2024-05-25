@@ -1,13 +1,13 @@
 const Base = require("@playwright/test");
-const { loginPage } = require('../e2e/pages/web/loginPage');
-const { productsPage } = require('../e2e/pages/web/productsPage');
+const { SearchPage } = require('../e2e/pages/responsive/searchPage');
+const { WebSearchPage } = require('../e2e/pages/web/WebSearchPage');
 
 exports.test = Base.test.extend({
-    loginPage: async ({page}, use) => {
-        await use(new loginPage(page))
+    SearchPage: async ({page}, use) => {
+        await use(new SearchPage(page))
     },
-    productsPage: async ({page}, use) => {
-        await use(new productsPage(page))
+    WebSearchPage: async ({page}, use) => {
+        await use(new WebSearchPage(page))
     }
 })
 //base class should be created for common functionality

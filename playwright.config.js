@@ -8,19 +8,19 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'web',
-      use: { ...devices['Desktop Firefox'], channel: 'firefox' }, // Adjust as needed
-    },
-    {
-      name: 'chrome',
       use: { ...devices['Desktop Chrome'], channel: 'chrome' }, // Adjust as needed
     },
+    // {
+    //   name: 'chrome',
+    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' }, // Adjust as needed
+    // },
     {
       name: 'responsive',
       use: devices['iPhone 12 Pro Max'],
     },
     {
       name: 'api',
-      use: { ...devices['Desktop Firefox'], channel: 'firefox' },
+      use: { ...devices['Desktop chrome'], channel: 'chrome' },
     },
     
   ],
