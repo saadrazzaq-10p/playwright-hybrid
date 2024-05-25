@@ -11,12 +11,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4  # Updated to use latest version
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4  # Updated to use latest version
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'  # Update to Node.js 20
+          node-version: '20'
 
       - name: Set up environment variables
         run: |
@@ -37,3 +37,9 @@ jobs:
 
       - name: Generate Allure report
         run: npx allure generate ./allure-results --clean
+
+      - name: Archive Allure report
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-report
+          path: allure-report
