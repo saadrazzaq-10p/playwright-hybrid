@@ -36,4 +36,4 @@ jobs:
         run: npx playwright test .e2e/tests/web/SearchTest.spec.js --project=web
 
       - name: Generate Allure report
-        run: npx allure generate ./allure-results -clean
+        run: npx allure generate ./allure-results

@@ -10,5 +10,3 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 .env
-/allure-results/
-/allure-report/
