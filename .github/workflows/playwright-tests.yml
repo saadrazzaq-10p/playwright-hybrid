@@ -32,11 +32,14 @@ jobs:
       - name: Install playwright
         run: npx playwright install
 
-      # - name: Install playwright
-      #   run: npx playwright install
+      - name: Run API tests
+        run: npx playwright test .e2e/tests/api/testApi.spec.js --project=api
+
+      - name: Run Responsive tests
+        run: npx playwright test .e2e/tests/responsive/SearchTest.spec.js --project=responsive
         
       - name: Run Web tests
-        run: npm run test:all
+        run: npx playwright test .e2e/tests/web/SearchTest.spec.js --project=web
 
       - name: Generate Allure report
         run: npx allure generate ./allure-results --clean
