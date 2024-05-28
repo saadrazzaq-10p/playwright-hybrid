@@ -35,6 +35,9 @@ jobs:
       - name: Run Web tests
         run: npx playwright test .e2e/tests/web/SearchTest.spec.js --project=web
 
+      - name: Run API tests
+        run: npx playwright test .e2e/tests/api/testApi.spec.js --project=api
+
       - name: Generate Allure report
         run: npx allure generate ./allure-results --clean
 

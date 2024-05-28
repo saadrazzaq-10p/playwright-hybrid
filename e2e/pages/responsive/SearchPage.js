@@ -24,15 +24,19 @@ class SearchPage {
     }
 
     async getDisplayName() {
-        return await this.userDisplayName.textContent();
+        try {
+            return await this.userDisplayName.textContent();
+        } catch (error) {
+            console.error('Error fetching display name:', error);
+            return '';
+        }
     }
 
     async getFollowersCount() {
         try {
             const followersElement = await this.page.locator('xpath=//h3[normalize-space()="3"]');
             const followersText = await followersElement.textContent();
-            
-            const followersCount = parseInt(followersText, 10); // Assuming followersText is something like "3 followers"
+            const followersCount = parseInt(followersText, 10);
             if (isNaN(followersCount)) {
                 throw new Error('Followers count is not a number');
             }

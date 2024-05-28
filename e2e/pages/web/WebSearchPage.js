@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-class SearchPage {
+class WebSearchPage {
     constructor(page) {
         this.page = page;
         this.searchInput = page.locator('input[data-testid="search-bar"]');
@@ -44,4 +44,4 @@ class SearchPage {
     }
 }
 
-module.exports = { SearchPage };
+module.exports = { WebSearchPage };
