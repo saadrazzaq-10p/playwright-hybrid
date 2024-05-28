@@ -39,6 +39,9 @@ module.exports = defineConfig({
   ],
   use: {
     trace: 'on-first-retry',
+    launchOptions: {
+      slowMo: 2000, // Adding this 2 seconds delay to slow down the test execution.
+  },
   },
 });
 
