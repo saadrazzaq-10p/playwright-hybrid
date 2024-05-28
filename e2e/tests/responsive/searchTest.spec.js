@@ -18,6 +18,7 @@ test.describe('Search User name and verify Details', () => {
             expect(followersCount).toBeVisible;
             expect(followersCount).toBeGreaterThan(0);
             expect(displayName).toEqual(testData.displayName)
+            //Add network stable
         }
     });
 });

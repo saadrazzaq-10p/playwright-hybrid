@@ -15,6 +15,9 @@ test.describe("GitHub API Tests", () => {
 
     // Assert the status code is 200
     expect(response.status).toBe(200);
+    
+    //add assertion for contain
+    expect(response.body.login).toContain(username)
 
     // Assert the response body contains the expected username
     expect(response.body.login).toBe(username);
