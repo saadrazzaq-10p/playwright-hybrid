@@ -1,4 +1,6 @@
+const { clickElement } = require('../../../utils');
 require('dotenv').config();
+
 
 class SearchPage {
     constructor(page) {
@@ -15,7 +17,7 @@ class SearchPage {
 
     async searchFor(query) {
         await this.searchInput.fill(query);
-        await this.searchButton.click();
+        await clickElement(this.page, this.searchButton);
     }
 
     async getSearchResults() {
