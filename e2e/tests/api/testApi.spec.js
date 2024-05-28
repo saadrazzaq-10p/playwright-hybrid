@@ -13,6 +13,10 @@ test.describe("GitHub API Tests", () => {
     const username = testData.username;
     const response = await apiBase.getUser(username);
 
-    expect(response.login).toBe(username);
+    // Assert the status code is 200
+    expect(response.status).toBe(200);
+
+    // Assert the response body contains the expected username
+    expect(response.body.login).toBe(username);
   });
 });
