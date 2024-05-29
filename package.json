@@ -9,7 +9,7 @@
     "test:responsive": "npx playwright test .e2e/tests/responsive/ --project=responsive --headed",
     "test:api": "npx playwright test .e2e/tests/api/ --project=api",
     "test:all": "npm-run-all --parallel test:web test:responsive test:api",
-    "test:performance": "artillery run --config ./e2e/performance/config/config.yml ./e2e/performance/scenarios/scenario.yml"
+    "test:performance": "artillery run --config ./e2e/performance/config/config.yml ./e2e/performance/scenarios/scenario.yml -o report.json"
   },
   "keywords": [],
   "author": "",
